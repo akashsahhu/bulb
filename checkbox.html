@@ -1,0 +1,99 @@
+<html>
+<body>
+
+<p>Display some text when the checkbox is checked:</p>
+
+<label for="myCheck">Cricket:</label> 
+<input type="checkbox" id="myCheck" onclick="myFunction()">
+
+<label for="myCheck1">kho kho:</label> 
+<input type="checkbox" id="myCheck1" onclick="myFunction1()">
+
+<label for="myCheck2">kabaddi:</label> 
+<input type="checkbox" id="myCheck2" onclick="myFunction2()">
+
+<label for="myCheck3">basket ball:</label> 
+<input type="checkbox" id="myCheck3" onclick="myFunction3()">
+
+<label for="myCheck4">football:</label> 
+<input type="checkbox" id="myCheck4" onclick="myFunction4()">
+
+<label for="myCheck5">cycling:</label> 
+<input type="checkbox" id="myCheck5" onclick="myFunction5()">
+
+<p id="text" style="display:none">Cricket</p>
+
+<p id="text1" style="display:none">kho kho</p>
+
+<p id="text2" style="display:none">kabaddi</p>
+
+<p id="text3" style="display:none">basket ball</p>
+
+<p id="text4" style="display:none">football</p>
+
+<p id="text5" style="display:none">cycling</p>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction1() {
+  var checkBox = document.getElementById("myCheck1");
+  var text = document.getElementById("text1");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction2() {
+  var checkBox = document.getElementById("myCheck2");
+  var text = document.getElementById("text2");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  var checkBox = document.getElementById("myCheck3");
+  var text = document.getElementById("text3");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction4() {
+  var checkBox = document.getElementById("myCheck4");
+  var text = document.getElementById("text4");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction5() {
+  var checkBox = document.getElementById("myCheck5");
+  var text = document.getElementById("text5");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

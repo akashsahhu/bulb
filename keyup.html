@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" onkeyup="myFunction()" id="txtbox">
+<input type="text" id="down" onkeydown="down()">
+<script>
+function myFunction() {
+ var x = document.getElementById("txtbox").value;
+//  x.value = x.value.toUpperCase();
+    alert("up="+x);
+
+    function down(){
+        var x=document.getElementById('down').value;
+        alert("down="+x);
+    }
+}
+</script>
+</body>
+</html>

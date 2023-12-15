@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+</head>
+<style>
+    .slid{
+        width: 100%;  
+        height: 700px;
+    }
+    .left{
+        top: 350px;
+        position: absolute;
+    }
+    .right{
+        top: 350px;
+        right: 8px;
+        position: absolute;
+    }
+
+</style>
+<body>
+    <div class="slider">
+        <img src="img/l1.webp" alt="" class="slid">
+        <img src="img/l2.webp" alt="" class="slid">
+        <img src="img/l3.webp" alt="" class="slid">
+        <img src="img/l4.webp" alt="" class="slid">
+    </div>
+    <button onclick="pre()" class="left"><</button>
+    <button onclick="next()" class="right">></button>
+</body>
+<script>
+    var cnt=1;
+    var slid_img;
+    function show()
+    {
+        console.log();
+        slid_img=document.getElementsByClassName("slid")
+        if(cnt>slid_img.length){cnt=1}
+        if(cnt==0){cnt=slid_img.length}
+        for(var i=0;i<slid_img.length;i++)
+        {
+            console.log("hello");
+            document.getElementsByClassName("slid")[i].style.display="none";
+        }
+        document.getElementsByClassName("slid")[cnt-1].style.display="block";
+    }
+    function next()
+    {
+        cnt++;
+        show();
+    }
+    function pre()
+    {
+        cnt--; 
+        show();
+    }
+    setInterval(next,1500)
+    //     console.log("hello");
+    // },2000)
+    window.onload = function(){
+        show();
+    }
+</script>
+</html>

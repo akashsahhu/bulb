@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <!-- // id unique
+        // class multiple
+        // tagname multiple
+        // name multiple -->
+
+        <h1 id="myh1">HELLO</h1>
+        <H1 id="myh12">HELLO1</H1>
+        <h1 id="myth1">HELLO2</h1>
+        <H2 class="myclass">GOOD</H2>
+        <h2 class="myclass">GOOD EVENING</h2>
+        <H2 class="myclass">GOOD MORNING</H2>
+        <h2 class="myclass">GOOD</h2>
+
+        <input type="text" value="wel">
+        <input type="text" value="wel come" name="nam">
+        <input type="text" value="wel come" name="nam">
+
+        <!-- <div id="squ">hello</div>
+        <button onclick="squ()">click</button> -->
+</body>
+    <script>
+        var i=document.getElementById("myh1") 
+        document.write(i.innerHTML);
+        console.log(i.innerHTML)
+        document.getElementById('myh1').innerHTML="<b>WEL COME</b>";
+        document.getElementById('myh1').style.color="red";
+        document.getElementById('myh1').innerText="<b>HOW   ARE U?</b>";
+
+        var c=document.getElementsByClassName("myclass");
+        for(i=0;i<c.length;i++)
+        {
+            document.write("<br>"+c[i].innerHTML);
+             console.log(c[2].innerHTML);
+        }
+        // var ch="this is testing"
+        // document.getElementsByClassName("myclass")[0].innerHTML=ch;
+        // document.getElementsByClassName("myclass")[1].style.backgroundcolor="red";
+
+        // var t=document.getElementsByTagName("input")
+        // document.write(t[0].value);
+        // document.getElementsByTagName("input")[0].value=ch;
+        // document.getElementsByName("name")[1].value="good evening";
+
+        // function squ(){
+        //     document.getElementById("squ").style.color="red";
+        // }
+    </script>
+</html>

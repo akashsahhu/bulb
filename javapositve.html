@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=0;
+        // console.log('a=',a,'b=',b,'c=',c);
+    //     if(a>0)
+    //     {
+    //         document.write('<br>positive');
+    //     }else{
+    //     if(a==0)
+    //     {
+    //         document.write('<br>zero');
+    //     }else
+    //     {
+    //         document.write('<br>nagetive');
+    //     }
+    // }
+
+
+    // var a=31, b=239, c=80;
+    // console.log('a=',a,'b=',b,'c=',c);
+    // if(a>9 && b>9 && c>9 )
+    // {
+    //     document.write('<br>pass')
+    // }else
+    // {
+    //     document.write('<br>fail')
+    // }
+
+
+    var a=30, b=60, c=40;
+    console.log('a=',a,'b=',b,'c=',c)
+
+    if(a==b)
+	 {
+		 if(a==c)
+		 {
+			 document.write("<br>a,b,c same");
+		 }else
+		 {
+			 document.write("<br>a&b same");
+			 if(b>c)
+			 {
+				document.write("<br>c is min");
+			 }else
+			 {
+				document.write("<br>c is max");
+			 }
+		 }
+	 }else
+	 {
+		 if(a==c)
+		 {
+			 document.write("<br>a,c same");
+			 if(a>b)
+			 {
+				document.write("<br>b is min");
+		 }else
+		 {
+				document.write("<br>b is max");
+		 }
+	 }else
+	 {
+		 if(b==c)
+		 {
+			 document.write("<br>b,c same");
+			 if(b>a)
+			 {
+				document.write("<br>a is min");
+			 }else
+			 {
+				document.write("<br>a is max");
+			 }
+		  }else
+		  {
+			 document.write("<br>a,b, and c  is not same");
+			 if(a>b)
+			 {
+			      if(a>c)
+			      {
+					document.write("<br>a is max");
+			      }else
+			      {
+					document.write("<br>c is max");
+			      }
+		   }else
+			      if(b>c)
+			      {
+					document.write("<br>b is max");
+			       }else
+			       {	document.write("<br>c is max");
+			       }
+			 }
+		  }
+	 }
+
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back</title>
+</head>
+<body>
+    <script>
+        function one()
+        {
+            setTimeout(() => {
+                document.write("hello one");
+            }, 2000);
+        } 
+        function two()
+        {
+            setTimeout(() => {
+                document.write("<br> Hello two");
+            }, 1000)
+            one();
+            two();
+        }
+        function sum(a,b,callback){
+            setTimeout(() => {
+                var mul= a*b;
+                console.log("mul");
+                callback(mul);
+            }, 2000)
+        }                    
+
+        function disp(ans){
+            setTimeout(() =>{
+                console.log("disp"+ans);
+            },1000)
+        }
+        sum(11,2,disp);
+    </script>
+</body>
+</html>

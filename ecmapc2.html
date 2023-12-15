@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class demo{
+            constructor(i,n,p){
+                this.id=1;
+                this.name=n;
+                this.post=p;
+                this.salary="";
+                if(this.post=="manager")
+                {
+                    this.salary=20000;
+                }else{
+                    this.salary=10000;
+                }
+            }
+            disp(){
+                console.log("id="+this.id)
+                console.log("name="+this.name)
+                console.log("post="+this.post)
+                console.log("salary="+this.salary)
+                // if(this.post=="manager")
+                // {
+                //     this.salary=20000;
+                // }else{
+                //     this.salary=10000;
+                // }
+            }
+        }
+        var d=new demo(1,"akash","manager");
+        d.disp();
+    </script>
+</body>
+</html>

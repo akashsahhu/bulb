@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        var name="akash";
+        var email="akash@gmail.com"
+        var pass="akash123";
+        var obj={"name":name,"Email":email,"pass":pass};
+        arr.push(obj);
+
+        var name="hitesh";
+        var email="hitesh@gmail.com"
+        var pass="hitesh123";
+        var obj={"name":name,"Email":email,"pass":pass};
+        arr.push(obj);
+
+        console.log(arr);
+        localStorage.setItem("d",JSON.stringify(arr));
+    </script>
+</body>
+</html>

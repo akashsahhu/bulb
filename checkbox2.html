@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="myCheck">Cricket:</label>
+    <input type="checkbox" id="myCheck" value="value 1" onclick="myFunc()" />
+
+    <!-- <p id="text" style="display:none">Cricket</p> -->
+    <label for="myCheck">kho kho:</label>
+    <input type="checkbox" id="mycheck" value="value 2" onclick="myfunc()"/>
+
+    <p id="text" style="display:none">Cricket</p>
+    <p id="text" style="display:none">kho kho</p>
+
+
+    <!-- <input type="checkbox" value="value 3" />
+    <input type="checkbox" value="value 4" />
+    <input type="checkbox" value="value 5" />
+    <input type="checkbox" value="value 6" /> -->
+    
+    <!-- <button onclick="myFunc()">Store Value</button> -->
+    
+    <script>
+    function myFunc() {
+     let arr = [];
+     let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+    
+    checkboxes.forEach((item)=>{
+       arr.push(item.value)
+    }) 
+    
+    console.log(arr);
+    }
+
+    function myFunc() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+    </script> 
+</body>
+</html>
+

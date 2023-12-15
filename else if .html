@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body style="background-color: rgb(199,199,250);">  
+    <form action="" onsubmit="sub();return false">
+     name : <input type="text" class="data" value="" name="nam"><p>
+     Email : <input type="email" class="data" value="" name="Email"><p>
+     phone : <input type="number"  value="" class="data" name="Pho"><p>
+        state : <select id=" " class="data" name="state"><p>
+            <option value="">none</option>
+                <option value="">gujrat</option>
+                <option value="">maharastra</option>
+                <option value="">rajsthan</option>
+                <option value="">odisha</option>
+                <option value="">bihar</option>
+                <option value="">madhya pradesh</option>
+             </select><p>
+      city : <input type="text" value="" class="data" name="city"><p>
+        <input type="submit">
+        <div id="table">
+            <table id="table" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>phone</th>
+                        <th>state</th>
+                        <th>city</th>
+                    </tr>
+                </thead>
+                <tbody id="disp"></tbody>
+            </table>
+        </div>
+    </form>
+    <script>
+        function sub(){
+           console.log("hello");    
+            let N=document.getElementsByName("nam")[0].value;
+            let E=document.getElementsByName("Email")[0].value;
+            let P=document.getElementsByName("Pho")[0].value;
+            let S=document.getElementsByName("state")[0].value;
+            let C=document.getElementsByName("city")[0].value;
+            var cont=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ 
+            console.log(N);
+            if(N=="")
+            {
+                alert("name is empty");
+            }else if(N.length<5)
+            {
+                alert("5 carecter are required");
+            }else if(E=="")
+            {
+                alert("Email is empty");
+            }  else if(!E.match(cont))
+             {
+                 alert(" email is wrong")
+                 alert("@gmail.com")
+                 }
+            else if(P=="")
+            {
+                alert("phone num is empty")
+             }else if(isNaN(P))
+             {
+                 alert("alphabet is not required")
+             }
+            else if(P.length!=10)
+            {
+                alert("phone num is 10 digit required")
+            }
+            submit();
+        }
+        function submit()
+        {
+            console.log("hello submit");
+            var d=document.getElementsByClassName("data")
+            for(var i=0;i<d.length;i++)
+            {
+                document.getElementById("disp").innerHTML +="<tr><td>"+d[i].value+ "</td>"
+            }
+        }
+    </script>
+</body>
+</html>

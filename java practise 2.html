@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var  n=153,a,g,k,m=0;
+        k=n;
+       while(n>0)
+	{
+		a=n%10;
+		n=n/10;
+        n=parseInt(n)
+		g=a*a*a;
+		m=m+g;
+	}
+		document.write('<br>',+m)
+		if(k==m)
+		{
+                document.write('<br> armstrong')
+		}else
+		{
+            document.write(' <br>not armstrong')
+		}
+
+    //     var  n=11,n1,sum=0,rev;
+    // n1=n;
+	// while(n1>0)
+	// {
+
+	// 	rev=n1%10;
+	// 	sum=sum*10+rev;
+	// 	n1=n1/10;
+    //     n1=parseInt(n1)
+
+	// }
+    // document.write('<br>',+n)
+	// 	if(n==sum)
+	// 	{
+    //         document.write('<br> pelidrom')
+	// 	}
+	// 	else
+	// 	{
+	// 		document.write('<br> not pelidrom')
+	// 	}
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>on focus</h3>
+    <input type="text" class="foc" onfocus="myfocus()"  onblur="myblur()" >
+    <script>
+        function myfocus(){
+            var x=document.getElementsByClassName('foc');
+            x[0].style.color="red"
+        }
+        function myfocus(){
+            var r=document.getElementsByClassName('foc');
+            r[0].style.color="green"
+        }
+    </script>
+</body>
+</html>

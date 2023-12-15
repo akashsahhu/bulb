@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1,
+        #div2,
+        #div3,
+        #div4,
+        #div5,
+        #div6,
+        #div7,
+        #div8,
+        #div9{
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            float: left;
+            font-size: 120px;
+            text-align: center;
+        }
+
+        #div1,
+        #div4,
+        #div7{
+            clear: left;
+            border-left: none;
+        }
+
+        #main{
+            margin-left: 200px;
+        }
+
+        #div3,
+        #div6,
+        #div9{
+            border-right: none;
+        }
+
+        #div1,
+        #div2,
+        #div3{
+            border-top: none;
+        }
+
+        #div7,
+        #div8,
+        #div9{
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(197,167,225);">
+    <div id="main">
+        <div id="div1" onclick="game(this)"></div>
+        <div id="div2" onclick="game(this)"></div>
+        <div id="div3" onclick="game(this)"></div>
+        <div id="div4" onclick="game(this)"></div>
+        <div id="div5" onclick="game(this)"></div>
+        <div id="div6" onclick="game(this)"></div>
+        <div id="div7" onclick="game(this)"></div>
+        <div id="div8" onclick="game(this)"></div>
+        <div id="div9" onclick="game(this)"></div>
+    </div>
+
+    <h1 id="win"> </h1>
+    <div class="reset">
+        <button class="b1" onclick="reset()">reset</button>
+    </div>
+
+    <body>
+        <script>
+            var count = 0;
+
+            function game(control)
+
+            {
+                if(count <=9)
+                {
+                    if(count %2 == 0)
+
+                    {
+                        document.getElementById(control.id).innerHTML = "x"
+                    }else{
+                        document.getElementById(control.id).innerHTML = "0"
+                    }
+                    count++;
+                }
+                checkwin()
+            }
+
+            /// ======reset====//
+            function reset(){
+                location.reload();
+            }
+
+            // ====winner===//
+            function checkwin()
+            {
+
+            var b1=document.getElementById("div1").innerHTML;
+            var b2=document.getElementById("div2").innerHTML;
+            var b3=document.getElementById("div3").innerHTML;
+            var b4=document.getElementById("div4").innerHTML;
+            var b5=document.getElementById("div5").innerHTML;
+            var b6=document.getElementById("div6").innerHTML;
+            var b7=document.getElementById("div7").innerHTML;
+            var b8=document.getElementById("div8").innerHTML;
+            var b9=document.getElementById("div9").innerHTML;
+
+            if(b1=="x" && b2=="x" && b3=="x"|| b1=="x" && b4=="x" && b7=="x"|| b3=="x" && b5=="x" && b7=="x" || b1=="x" && b5=="x" && b9=="x" || b2=="x" && b5=="x" && b8=="x" || b3=="x" && b6=="x" && b9=="x" ||b4=="x" && b5=="x" && b6=="x"||  b7=="x" && b8=="x" && b9=="x")
+            {
+                document.getElementById("win").innerHTML="x are win";
+            }
+
+            if(b1=="0" && b2=="0" && b3=="0"|| b1=="0" && b4=="0" && b7=="0"|| b3=="0" && b5=="0" && b7=="0" || b1=="0" && b5=="0" && b9=="0" || b2=="0" && b5=="0" && b8=="0" || b3=="0" && b6=="0" && b9=="0" ||b4=="0" && b5=="0" && b6=="0"||  b7=="0" && b8=="0" && b9=="0")
+            {
+                document.getElementById("win").innerHTML="0 are win";
+            }
+        }
+        </script>
+    </body>
+    
+</body>
+</html>

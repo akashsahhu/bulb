@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider 2 </title>
+</head>
+<style>
+    .demo2{
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    img{
+        height: 700px;
+        width: 100%;
+    }
+    .red{
+        text-align: center;
+        border: 2px solid rgba(196, 20, 20, 0.987);
+    }
+</style>
+<body>
+    <div class="demo1">
+        <img src="img/w1.webp" alt="" class="demo">
+        <img src="img/w2.webp" alt="" class="demo">
+        <img src="img/w3.webp" alt="" class="demo">
+        <img src="img/w4.webp" alt="" class="demo">
+        <img src="img/w5.webp" alt="" class="demo">
+    </div>
+
+    <div class="red">
+        <img src="img/w1.webp" alt="" class="demo2" id="0" onclick="demo3(this.id)">
+        <img src="img/w2.webp" alt="" class="demo2" id="1" onclick="demo3(this.id)">
+        <img src="img/w3.webp" alt="" class="demo2" id="2" onclick="demo3(this.id)">
+        <img src="img/w4.webp" alt="" class="demo2" id="3" onclick="demo3(this.id)">
+        <img src="img/w5.webp" alt="" class="demo2" id="4" onclick="demo3(this.id)">
+    </div>
+</body>
+    <script>
+        var cnt=0;
+        var slid_img;
+            function slid(){
+                
+                var slid_img = document.getElementsByClassName("demo")
+                
+                for(var i=0;i<slid_img.length;i++){
+                    slid_img[i].style.display = "none";
+                }
+                slid_img[cnt].style.display = "block";
+            }
+
+            function demo3(n){
+
+                cnt=n;
+                slid();
+                
+            }
+
+            window.onload = function(){
+                slid();
+            }
+    </script>
+
+</html>

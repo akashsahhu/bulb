@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant menu</title>
+    <style>
+        body{
+            background-color: rgb(238, 228, 232);
+            border: 2px solid black;
+        }
+        img{
+            width: 500px;
+            height: 300px;
+        }
+        .right{
+            right: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: rgb(20, 4, 42);"> kuwait restaurant</h1>
+    <div class="container">
+        <div class="por_list">
+            <div class="product_">
+                <div class="right">
+                    <div class="img_box">
+                        <img src="img/pizza1.webp" alt="">
+                    </div>
+                    <div class="detail ">
+                        <div class="item_name">
+                            <label for="name">Item name :</label>
+                            <span>pizza</span>
+                        </div>
+                        <div class="item_price">
+                            <label for="name">Price :</label>
+                            <span id="pizza">200</span>
+                        </div>
+                        <div class="item_check">
+                            <label for="name">Order Now: </label>
+                            <input type="checkbox" value="200" onchange="bill()">
+                        </div>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="img_box">
+                        <img src="img/burger1.webp" alt="">
+                    </div>
+                    <div class  ="detail" >
+                        <div class="iten_name">
+                            <label for="name">Item name : </label>
+                            <span>Burger</span>
+                        </div>
+                        <div class="item_price">
+                            <label for="name">Price :</label>
+                            <span id="burger">200</span>
+                        </div>
+                        <div class="item_check">
+                            <label for="name">Order Now: </label>
+                            <input type="checkbox" value="200" onchange="bill()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product_2">
+                <div class="right">
+                    <div class="img_box">
+                        <img src="img/french1.webp" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="item_name">
+                            <label for="name">Item name: </label>
+                            <span>french fries</span>
+                        </div>
+                        <div class="item_price">
+                            <label for="name">price :</label>
+                            <span id="french">100</span>
+                        </div>
+                        <div class="item_check">
+                            <label for="name">Order now : </label>
+                            <input type="checkbox" value="100" onchange="bill()">
+                        </div>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="img_box">
+                        <img src="img/noodles1.webp" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="item_name">
+                            <label for="name">Item name : </label>
+                            <span>Noodles</span>
+                        </div>
+                        <div class="item_price">
+                            <label for="name">Item price: </label>
+                            <span id="noodles">200</span>
+                        </div>
+                        <div class="item_check">
+                            <label for="name">Order now: </label>
+                            <input type="checkbox" value="200" onchange="bill()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product_3">
+                <div class="right">
+                    <div class="img_box">
+                        <img src="img/hot dog1.webp" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="item_name">
+                            <label for="name">Item name: </label>
+                            <span>Hot dog</span>
+                        </div>
+                        <div class="item_price">
+                            <label for="name">price :</label>
+                            <span id="french">150</span>
+                        </div>
+                        <div class="item_check">
+                            <label for="name">Order now : </label>
+                            <input type="checkbox" value="150" onchange="bill()">
+                        </div>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="img_box">
+                        <img src="img/salad1.webp" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="item_name">
+                            <label for="name">Item name : </label>
+                            <span>salad</span>
+                        </div>
+                        <div class="item_price">
+                            <label for="name">Item price: </label>
+                            <span id="noodles">80</span>
+                        </div>
+                        <div class="item_check">
+                            <label for="name">Order now: </label>
+                            <input type="checkbox" value="80" onchange="bill()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="total bill">
+                    <h2>Total bill + GST(30%) :</h2>
+                </div>
+                <div class="your order">
+                    <label for="">Your bill : </label>
+                    <h3 id="bill_amount"> </h3>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function bill(){
+            var v = document.getElementsByTagName("input");
+            var total = 0;
+            var gst=0;
+            for(i=0; i < v.length; i++){
+                if(v[i].checked == true) {
+                    total = parseInt(total) + parseInt(v[i].value);
+                }
+                gst=total*30/100;
+                total1=gst+total;
+                
+                document.getElementById("bill_amount").innerHTML = total1;
+            }
+          
+        }
+    </script>
+    
+</body>
+</html>

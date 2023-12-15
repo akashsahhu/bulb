@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(name,post, age, salary){
+            this.name = name;
+            this.post = post;
+            this.age = age;
+            this.salary = salary;
+        }
+        
+        var john = new person("john","manager", 30, 50000);
+
+        var joe =   new person("joe","salsemen",  23, 20000)
+
+        console.log(john);
+        console.log(joe);
+    </script>
+</body>
+</html>

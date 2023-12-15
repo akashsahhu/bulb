@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>pass</th>
+            </tr>
+        </thead>
+<tbody id="disp"></tbody>
+    </table>
+    <script>
+        var data=JSON.parse(localStorage.getItem("d"))
+        console.log("demo2"+data);
+
+        window.onload=function(){
+
+            for(i=0;i<data.length;i++){
+
+                document.getElementById("disp").innerHTML+="<tr><td>"+data[i].name+"</td>"+"<td>"+data[i].Email+"</td>"+"<td>"+data[i].pass+"</td></tr>";
+            }
+        }
+    </script>
+</body>
+</html>
